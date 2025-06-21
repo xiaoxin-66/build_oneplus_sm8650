@@ -15,7 +15,7 @@ error() {
 }
 
 # 参数设置
-KERNEL_SUFFIX="-android14-11-gd3f2a1a22282"
+KERNEL_SUFFIX="-android14-TG@qdykernel"
 ENABLE_KPM=true
 ENABLE_LZ4KD=true
 
