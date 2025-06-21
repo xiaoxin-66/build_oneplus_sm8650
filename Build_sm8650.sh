@@ -31,13 +31,13 @@ case $device_choice in
         DEVICE_NAME="oneplus_ace5"
         REPO_MANIFEST="oneplus_ace5.xml"
         ;;
-    2)
-        DEVICE_NAME="oneplus_pad_pro"
-        REPO_MANIFEST="oneplus_pad_pro_v.xml"
-        ;;
-    3)
+    2)  
         DEVICE_NAME="oneplus_12"
         REPO_MANIFEST="oneplus12_v.xml"
+        ;;
+    3)
+        DEVICE_NAME="oneplus_pad_pro"
+        REPO_MANIFEST="oneplus_pad_pro_v.xml"
         ;;
     *)
         error "无效的选择，请输入1-3之间的数字"
