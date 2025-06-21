@@ -9,6 +9,7 @@ on:
        options:
           - 'oneplus_ace5'
           - 'oneplus12_v'
+          - 'oneplus_pad_pro_v'
        default: 'oneplus_ace5'
       KERNEL_SUFFIX:
         type: string
