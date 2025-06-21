@@ -23,7 +23,8 @@ ENABLE_LZ4KD=true
 info "请选择要编译的机型："
 info "1. 一加 Ace 5"
 info "2. 一加 12"
-read -p "输入选择 [1-2]: " device_choice
+info "3. 一加 平板Pro"
+read -p "输入选择 [1-3]: " device_choice
 
 case $device_choice in
     1)
@@ -31,18 +32,22 @@ case $device_choice in
         REPO_MANIFEST="oneplus_ace5.xml"
         ;;
     2)
+        DEVICE_NAME="oneplus_pad_pro"
+        REPO_MANIFEST="oneplus_pad_pro_v.xml"
+        ;;
+    3)
         DEVICE_NAME="oneplus_12"
         REPO_MANIFEST="oneplus12_v.xml"
         ;;
     *)
-        error "无效的选择，请输入1-2之间的数字"
+        error "无效的选择，请输入1-3之间的数字"
         ;;
 esac
 
 # 自定义补丁
 
 
-read -p "输入内核名称修改(示例：-TG@qdykernel  回车默认): " input_suffix
+read -p "输入内核名称修改(可改中文和emoji 回车默认): " input_suffix
 [ -n "$input_suffix" ] && KERNEL_SUFFIX="$input_suffix"
 
 read -p "是否启用kpm?(回车默认开启) [y/N]: " kpm
