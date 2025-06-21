@@ -42,7 +42,7 @@ esac
 # 自定义补丁
 
 
-read -p "输入内核名称修改(可改中文和emoji 回车默认): " input_suffix
+read -p "输入内核名称修改(示例：-TG@qdykernel  回车默认): " input_suffix
 [ -n "$input_suffix" ] && KERNEL_SUFFIX="$input_suffix"
 
 read -p "是否启用kpm?(回车默认开启) [y/N]: " kpm
