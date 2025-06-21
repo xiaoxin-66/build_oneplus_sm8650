@@ -139,7 +139,7 @@ cd "$KERNEL_WORKSPACE" || error "无法进入kernel_workspace目录"
 
 # 初始化源码
 info "初始化repo并同步源码..."
-repo init -u https://github.com/HanKuCha/kernel_manifest.git -b refs/heads/oneplus/sm8650 -m "$REPO_MANIFEST" --depth=1 || error "repo初始化失败"
+repo init -u https://github.com/OnePlusOSS/kernel_manifest.git -b refs/heads/oneplus/sm8650 -m "$REPO_MANIFEST" --depth=1 || error "repo初始化失败"
 repo --trace sync -c -j$(nproc --all) --no-tags || error "repo同步失败"
 
 # ==================== 核心构建步骤 ====================
