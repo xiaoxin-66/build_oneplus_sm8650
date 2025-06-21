@@ -21,8 +21,8 @@ git clone https://github.com/showdo/build_oneplus_sm8650.git
 
 ```bash
 cd build_oneplus_sm8650
-chmod +x build_sm8650.sh
-./build_sm8650.sh
+chmod +x Build_sm8650.sh
+./Build_sm8650.sh
 ```
 
 ---
