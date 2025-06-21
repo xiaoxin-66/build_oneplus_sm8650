@@ -11,11 +11,6 @@ on:
           - 'oneplus12_v'
           - 'oneplus_pad_pro_v'
        default: 'oneplus_ace5'
-      KERNEL_SUFFIX:
-        type: string
-        description: "自定义内核名称后缀"
-        required: false
-        default: "-android14-11-gd3f2a1a22282"
       LZ4_ENABLE:
        description: "启用lz4+zstd优化"
        required: false
@@ -90,9 +85,9 @@ jobs:
          sed -i '$i res=$(echo "$res" | sed '\''s/-dirty//g'\'')' kernel_platform/msm-kernel/scripts/setlocalversion
          sed -i '$i res=$(echo "$res" | sed '\''s/-dirty//g'\'')' kernel_platform/external/dtc/scripts/setlocalversion
          # 修改内核名
-         sed -i '$s|echo "\$res"|echo "${{ github.event.inputs.KERNEL_SUFFIX }}"|' kernel_platform/common/scripts/setlocalversion            
-          sed -i '$s|echo "\$res"|echo "${{ github.event.inputs.KERNEL_SUFFIX }}"|' kernel_platform/msm-kernel/scripts/setlocalversion
-          sed -i '$s|echo "\$res"|echo "${{ github.event.inputs.KERNEL_SUFFIX }}"|' kernel_platform/external/dtc/scripts/setlocalversion
+         sed -i '$s|echo "\$res"|echo "-android14-TG@qdykernel"|' kernel_platform/common/scripts/setlocalversion            
+          sed -i '$s|echo "\$res"|echo "-android14-TG@qdykernel"|' kernel_platform/msm-kernel/scripts/setlocalversion
+          sed -i '$s|echo "\$res"|echo "-android14-TG@qdykernel"|' kernel_platform/external/dtc/scripts/setlocalversion
          # 清理abi保护
          rm kernel_platform/common/android/abi_gki_protected_exports_* || echo "No protected exports!"
          rm kernel_platform/msm-kernel/android/abi_gki_protected_exports_* || echo "No protected exports!"
