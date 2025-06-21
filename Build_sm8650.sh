@@ -31,7 +31,7 @@ case $device_choice in
         DEVICE_NAME="oneplus_ace5"
         REPO_MANIFEST="oneplus_ace5.xml"
         ;;
-    2)  
+    2)
         DEVICE_NAME="oneplus_12"
         REPO_MANIFEST="oneplus12_v.xml"
         ;;
