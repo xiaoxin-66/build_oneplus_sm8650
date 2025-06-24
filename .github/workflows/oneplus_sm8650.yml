@@ -10,7 +10,7 @@ on:
           - 'oneplus_ace5'
           - 'oneplus12'
           - 'oneplus_pad_pro'
-       default: 'oneplus_ace5'
+        default: 'oneplus_ace5'
       enable_feature_y:
        description: "启用lz4+zstd优化"
        required: false
