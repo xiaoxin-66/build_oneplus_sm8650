@@ -11,12 +11,12 @@ on:
           - 'oneplus12'
           - 'oneplus_pad_pro'
         default: 'oneplus_ace5'
-      enable_feature_y:
+      enable_feature_X:
        description: "启用lz4+zstd优化"
        required: false
        default: true
        type: boolean
-      enable_feature_x:
+      enable_feature_Y:
         type: boolean
         description: "启用KPM"
         required: false
@@ -187,7 +187,7 @@ jobs:
 
       - name: 🔧 Set gki_defconfig (设置编译配置)
         env:
-          ENABLE_FEATURE_X: "${{ inputs.enable_feature_x }}"
+          ENABLE_FEATURE_Y: "${{ inputs.enable_feature_x }}"
         run: |
           cd kernel_workspace/kernel_platform
           # KSU
