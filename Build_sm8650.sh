@@ -164,8 +164,7 @@ sed -i '$s|echo "\$res"|echo "$KERNEL_SUFFIX"|' kernel_platform/external/dtc/scr
 # 设置SukiSU
 info "设置SukiSU..."
 cd kernel_platform || error "进入kernel_platform失败"
-curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s susfs-main || error "SukiSU设置失败"
-
+curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s susfs-main
 cd KernelSU || error "进入KernelSU目录失败"
 KSU_VERSION=$(expr $(/usr/bin/git rev-list --count main) "+" 10700)
 export KSU_VERSION=$KSU_VERSION
@@ -289,7 +288,7 @@ fi
 # 创建AnyKernel3包
 info "创建AnyKernel3包..."
 cd "$WORKSPACE" || error "返回工作目录失败"
-git clone -q https://github.com/Kernel-SU/AnyKernel3.git --depth=1 || info "AnyKernel3已存在"
+git clone -q https://github.com/showdo/AnyKernel3.git --depth=1 || info "AnyKernel3已存在"
 rm -rf ./AnyKernel3/.git
 rm -f ./AnyKernel3/push.sh
 cp "$KERNEL_WORKSPACE/kernel_platform/common/out/arch/arm64/boot/Image" ./AnyKernel3/ || error "复制Image失败"
