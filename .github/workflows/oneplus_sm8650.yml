@@ -161,9 +161,9 @@ jobs:
           cp ../susfs4ksu/kernel_patches/fs/* ./common/fs/
           cp ../susfs4ksu/kernel_patches/include/linux/* ./common/include/linux/
           if [ "${{ github.event.inputs.enable_feature_y }}" = "true" ]; then
-            cp ../kernel_patches/001-lz4.patch ./common/
-            cp ../kernel_patches/lz4armv8.S ./common/lib
-            cp ../kernel_patches/002-zstd.patch ./common/
+            cp ../kernel_patches/zram/001-lz4.patch ./common/
+            cp ../kernel_patches/zram/lz4armv8.S ./common/lib
+            cp ../kernel_patches/zram/002-zstd.patch ./common/
           fi
           cd ./common
           patch -p1 < 50_add_susfs_in_gki-android14-6.1.patch || true
